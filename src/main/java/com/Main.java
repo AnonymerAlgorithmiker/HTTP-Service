@@ -1,10 +1,12 @@
 package com;
 import com.sun.net.httpserver.HttpServer;
 
+
 import javax.swing.*;
 import java.awt.*;
 import java.io.IOException;
 import java.net.InetSocketAddress;
+import java.util.Scanner;
 
 
 public class Main
@@ -14,6 +16,7 @@ public class Main
     {
         startUI();
     }
+
 
     //Small Swing gui to select which server you want to start
     public static void startUI(){
@@ -56,6 +59,7 @@ public class Main
         frame.pack();
         frame.show();
     }
+
 
     //helloWorld server prints helloWorld on localhost:8000/
     public static void helloWorldServer() throws IOException{

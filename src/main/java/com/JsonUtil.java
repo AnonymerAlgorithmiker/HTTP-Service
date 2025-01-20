@@ -19,10 +19,10 @@ public class JsonUtil {
     //reads json file using gson and converts it into a list of java objects
     public void readJsonFile(){
         Gson gson = new Gson();
-        String file = "src/main/resources/com/products.json";
         try {
-            jsonString = new String(Files.readAllBytes(Paths.get(file)));
+            jsonString = new String(getClass().getResourceAsStream("products.json").readAllBytes());
         } catch (IOException e) {
+            System.out.println("products.json not found");
             throw new RuntimeException(e);
         }
         Type listType = new TypeToken<List<Product>>() {}.getType();
